@@ -114,5 +114,15 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script>
+      $("#currentDay").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+
+      setInterval(function () {
+        $("#currentDay").text(moment().format("dddd, MMMM Do YYYY, h:mm:ss a"));
+      }, 1000);
+
+      let currentHour = parseInt(moment().format("H"));
+      console.log(currentHour);
+    </script>
   </body>
 </html>
